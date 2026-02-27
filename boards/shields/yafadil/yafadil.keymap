@@ -161,7 +161,7 @@
             bindings = <
             &trans     &kp LBKT   &kp LBRC      &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp DQT    &kp TILDE
             &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL  &trans         &kp UNDER  &kp LARW   &kp DARW   &kp UARW   &kp RARW
-            &kp H      &kp N7     &kp L_SHIFT   &kp GT     &trans         &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
+            &kp H      &kp N7     &kp LSHFT   &kp GT     &trans         &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
                                   &trans        &trans     &trans         &trans     &trans     &trans
             >;
         };
