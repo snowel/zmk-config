@@ -9,7 +9,6 @@
 / {
     behaviors {
         ht: hold_tap {
-            label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -22,7 +21,6 @@
 	// MOD MORPHES
 	hycol: hyphen_colon {
 	    compatible = "zmk,behavior-mod-morph";
-            label = "DASH_COLON";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -30,7 +28,6 @@
 
 	spcom: special_comma {
 	    compatible = "zmk,behavior-mod-morph";
-            label = "SPECIAL_COM";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -38,7 +35,6 @@
 
 	spdot: special_dot {
 	    compatible = "zmk,behavior-mod-morph";
-            label = "SPECIAL_DOT";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -103,25 +99,25 @@
         combo_left {
             timeout-ms = <50>;
             key-positions = <11 12 16>;
-            bindings = <&kp LARW>;
+            bindings = <&kp LEFT>;
         };
 
         combo_down {
             timeout-ms = <50>;
             key-positions = <11 12 17>;
-            bindings = <&kp DARW>;
+            bindings = <&kp DOWN>;
         };
 
         combo_up {
             timeout-ms = <50>;
             key-positions = <11 12 18>;
-            bindings = <&kp UARW>;
+            bindings = <&kp UP>;
         };
 
         combo_right {
             timeout-ms = <150>;
             key-positions = <11 12 19>;
-            bindings = <&kp RARW>;
+            bindings = <&kp RIGHT>;
         };
 
         combo_del {
@@ -160,7 +156,7 @@
         left_layer {
             bindings = <
             &trans     &kp LBKT   &kp LBRC      &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp DQT    &kp TILDE
-            &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL  &trans         &kp UNDER  &kp LARW   &kp DARW   &kp UARW   &kp RARW
+            &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL  &trans         &kp UNDER  &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
             &kp H      &kp N7     &kp LSHFT   &kp GT     &trans         &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
                                   &trans        &trans     &trans         &trans     &trans     &trans
             >;
