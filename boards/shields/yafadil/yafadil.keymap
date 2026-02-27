@@ -153,15 +153,15 @@
          &kp W      &kp L      &kp Y        &kp P        &kp B               &kp Z        &kp F        &kp O        &kp U       &hycol
          &ht LGUI C &ht LALT R &ht LSHFT S  &ht LCTRL T  &kp G               &kp M        &ht RCTRL N  &ht RSHFT E  &ht RALT I  &ht RGUI A
          &kp Q      &kp J      &kp V        &kp D        &kp K               &kp X        &kp H        &kp SQT      &spcom      &spdot
-                         &lt 1 T      &ht LSHFT SPACE    &kp H               &kp RSHFT  &key_repeat  &lt 2 COMMA
+                               &lt 1 T      &kp SPACE    &kp LSHFT           &kp RSHFT    &key_repeat  &lt 2 COMMA
             >;
         };
 
         left_layer {
             bindings = <
-            &trans     &kp LBKT   &kp LBRC      &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp DQT   &kp TILDE
+            &trans     &kp LBKT   &kp LBRC      &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp DQT    &kp TILDE
             &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL  &trans         &kp UNDER  &kp LARW   &kp DARW   &kp UARW   &kp RARW
-            &caps_word &kp N7     &kp L_SHIFT   &kp GT     &trans         &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
+            &kp H      &kp N7     &kp L_SHIFT   &kp GT     &trans         &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
                                   &trans        &trans     &trans         &trans     &trans     &trans
             >;
         };
@@ -177,18 +177,10 @@
 
         tri_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0   &sys_reset &kp F1     &kp F2     &kp F3     &kp F4  
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans    &kp F5     &kp F6     &kp F7     &kp F8 
-	//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &kp F9     &kp F10     &kp F11     &kp F12
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   &trans       &trans     &trans         &trans     &trans &trans
-        //                                  ╰──────────┴──────────╯   ╰──────────┴──────────╯
+           &sys_reset  &trans     &trans     &trans     &bt BT_SEL 0       &sys_reset &kp F1     &kp F2     &kp F3     &kp F4
+           &bootloader &trans     &trans     &trans     &bt BT_SEL 1       &trans     &kp F5     &kp F6     &kp F7     &kp F8
+           &trans      &trans     &trans     &bt BT_CLR &bt BT_SEL 2       &trans     &kp F9     &kp F10    &kp F11    &kp F12
+                                  &trans     &trans     &trans             &trans     &trans     &trans
             >;
         };
     };
