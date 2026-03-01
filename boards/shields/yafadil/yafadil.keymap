@@ -392,7 +392,7 @@ WOuld like to ahve one shot shift but layer on hold
          &kp W      &kp L      &kp Y        &kp P        &kp B               &kp Z        &kp F        &kp O        &kp U       &hycol
          &ht LGUI C &ht LALT R &ht LSHFT S  &ht LCTRL T  &kp G               &kp M        &ht RCTRL N  &ht RSHFT E  &ht RALT I  &ht RGUI A
          &kp Q      &kp J      &kp V        &kp D        &kp K               &kp X        &kp H        &kp SQT      &spcom      &spdot
-                                            &mo 2        &ht LSHFT SPACE    &key_repeat  &mo 1
+                               &mo 2        &kp SPACE    &kp LSHFT           &kp LSHFT    &key_repeat  &mo 1
             >;
         };
 
@@ -401,7 +401,7 @@ WOuld like to ahve one shot shift but layer on hold
             &kp EXCL   &kp N1     &kp N2    &kp N3    &kp EXCL        &kp AMPS    &kp AMPS     &kp HASH      &kp DLLR      &kp PRCNT
             &kp N0     &kp N4     &kp N5    &kp N6    &kp N0          &kp SEMI    &kp EQUAL    &kp PLUS      &kp AT        &kp ASTRK 
             &kp EXCL   &kp N7     &kp N8    &kp N9    &caps_word      &kp ASTRK   &ht RCTRL LT &ht RSHFT GT  &ht RALT PIPE &kp RGUI
-                                            &trans    &kp N0          &trans      &trans
+                                            &trans    &kp N0          &trans      &trans      &trans      &trans
             >;
         };
 
@@ -410,7 +410,7 @@ WOuld like to ahve one shot shift but layer on hold
             &kp TILDE  &kp LBKT      &kp LBRC       &kp RBRC      &trans         &kp GRAVE  &kp LPAR   &kp RPAR   &kp DQT    &kp TILDE
             &kp LGUI   &kp LALT      &ht LSHFT LT   &ht LCTRL GT  &caps_word     &kp UNDER  &kp LARW   &kp DARW   &kp UARW   &kp RARW
             &kp LGUI   &ht LALT LBKT &ht LSHFT RBKT &caps_word    &caps_word     &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
-                                                    &trans        &trans         &trans     &trans
+                                            &trans    &kp N0          &trans      &trans      &trans      &trans
             >;
         };
 
@@ -419,7 +419,8 @@ WOuld like to ahve one shot shift but layer on hold
           &bootloader &kp F1       &kp F2       &kp F3       &trans          &trans       &kp F4         &kp F5     &kp F6         &bootloader
           &bt BT_PRV  &kp F7       &kp F8       &kp F9       &out OUT_USB    &out OUT_BLE &kp F10        &kp F11    &kp F12        &bt BT_NXT
           &sys_reset  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_NXT &bt BT_CLR_ALL &sys_reset 
-                                                &trans       &trans          &trans       &trans
+                                            &trans    &kp N0          &trans      &trans      &trans      &trans
+            >;
             >;
         };
     };
