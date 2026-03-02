@@ -52,7 +52,7 @@ WOuld like to ahve one shot shift but layer on hold
 	    compatible = "zmk,behavior-mod-morph";
             label = "SPECIAL_COM";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp EXCL>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
 
@@ -60,7 +60,7 @@ WOuld like to ahve one shot shift but layer on hold
 	    compatible = "zmk,behavior-mod-morph";
             label = "SPECIAL_DOT";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp QMARK>;
+            bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
     };// END BEHAVIOURS
@@ -380,7 +380,7 @@ WOuld like to ahve one shot shift but layer on hold
     // 0  1  2  3  4      5  6  7  8  9
     // 10 11 12 13 14     15 16 17 18 19
     // 20 21 22 23 24     25 26 27 28 29
-    //          30 31     32 33
+    //       30 31 32     33 34 35
 
     }; // END COMBOS
 
@@ -392,7 +392,7 @@ WOuld like to ahve one shot shift but layer on hold
          &kp W      &kp L      &kp Y        &kp P        &kp B               &kp Z        &kp F        &kp O        &kp U       &hycol
          &ht LGUI C &ht LALT R &ht LSHFT S  &ht LCTRL T  &kp G               &kp M        &ht RCTRL N  &ht RSHFT E  &ht RALT I  &ht RGUI A
          &kp Q      &kp J      &kp V        &kp D        &kp K               &kp X        &kp H        &kp SQT      &spcom      &spdot
-                               &mo 2        &kp SPACE    &kp LSHFT           &kp LSHFT    &key_repeat  &mo 1
+                               &mo 2        &kp SPACE    &mo 1           &kp LSHFT    &key_repeat  &mo 1
             >;
         };
 
