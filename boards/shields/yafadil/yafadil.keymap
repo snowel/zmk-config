@@ -376,6 +376,13 @@ WOuld like to ahve one shot shift but layer on hold
         };
 
 */
+
+        wedlock {
+            timeout-ms = <150>;
+            key-positions = <0 1 8 9>;
+            bindings = <&tog 4>;
+        };
+
     // Combo ref
     // 0  1  2  3  4      5  6  7  8  9
     // 10 11 12 13 14     15 16 17 18 19
@@ -392,35 +399,45 @@ WOuld like to ahve one shot shift but layer on hold
          &kp W      &kp L      &kp Y        &kp P        &kp B               &kp Z        &kp F        &kp O        &kp U       &hycol
          &ht LGUI C &ht LALT R &ht LSHFT S  &ht LCTRL T  &kp G               &kp M        &ht RCTRL N  &ht RSHFT E  &ht RALT I  &ht RGUI A
          &kp Q      &kp J      &kp V        &kp D        &kp K               &kp X        &kp H        &kp SQT      &spcom      &spdot
-                               &mo 2        &kp SPACE    &mo 1           &kp LSHFT    &key_repeat  &mo 1
+                               &mo 2        &kp SPACE    &mo 1               &kp LSHFT    &key_repeat  &mo 1
             >;
         };
 
         right_layer {
             bindings = <
-            &kp EXCL   &kp N1     &kp N2    &kp N3    &kp EXCL        &kp AMPS    &kp AMPS     &kp HASH      &kp DLLR      &kp PRCNT
-            &kp N0     &kp N4     &kp N5    &kp N6    &kp N0          &kp SEMI    &kp EQUAL    &kp PLUS      &kp AT        &kp ASTRK 
-            &kp EXCL   &kp N7     &kp N8    &kp N9    &caps_word      &kp ASTRK   &ht RCTRL LT &ht RSHFT GT  &ht RALT PIPE &kp RGUI
-                                            &trans    &kp N0          &trans      &trans      &trans      &trans
+            &kp EXCL   &kp N1     &kp N2    &kp N3    &kp EXCL            &kp AMPS    &kp AMPS     &kp HASH      &kp DLLR      &kp PRCNT
+            &kp N0     &kp N4     &kp N5    &kp N6    &kp N0              &kp SEMI    &kp EQUAL    &kp PLUS      &kp AT        &kp ASTRK 
+            &kp EXCL   &kp N7     &kp N8    &kp N9    &caps_word          &kp ASTRK   &ht RCTRL LT &ht RSHFT GT  &ht RALT PIPE &kp RGUI
+                                  &kp SPACE &kp N0    &kp SPACE           &trans      &trans      &trans
             >;
         };
 
         left_layer {
             bindings = <
-            &kp TILDE  &kp LBKT      &kp LBRC       &kp RBRC      &trans         &kp GRAVE  &kp LPAR   &kp RPAR   &kp DQT    &kp TILDE
-            &kp LGUI   &kp LALT      &ht LSHFT LT   &ht LCTRL GT  &caps_word     &kp UNDER  &kp LARW   &kp DARW   &kp UARW   &kp RARW
-            &kp LGUI   &ht LALT LBKT &ht LSHFT RBKT &caps_word    &caps_word     &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
-                                            &trans    &kp N0          &trans      &trans      &trans      &trans
+            &kp TILDE  &kp LBKT      &kp LBRC       &kp RBRC      &trans             &kp GRAVE  &kp LPAR   &kp RPAR   &kp DQT    &kp TILDE
+            &kp LGUI   &kp LALT      &ht LSHFT LT   &ht LCTRL GT  &caps_word         &kp UNDER  &kp LARW   &kp DARW   &kp UARW   &kp RARW
+            &kp LGUI   &ht LALT LBKT &ht LSHFT RBKT &caps_word    &caps_word         &kp SQT    &kp LPAR   &kp RPAR   &kp FSLH   &kp BSLH
+                                     &trans         &kp N0        &trans             &trans     &trans     &trans
             >;
         };
 
         tri_layer {
             bindings = <
-          &bootloader &kp F1       &kp F2       &kp F3       &trans          &trans       &kp F4         &kp F5     &kp F6         &bootloader
-          &bt BT_PRV  &kp F7       &kp F8       &kp F9       &out OUT_USB    &out OUT_BLE &kp F10        &kp F11    &kp F12        &bt BT_NXT
-          &sys_reset  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_NXT &bt BT_CLR_ALL &sys_reset 
-                                            &trans    &kp N0          &trans      &trans      &trans      &trans
+          &bootloader &kp F1       &kp F2       &kp F3       &trans              &trans       &kp F4         &kp F5     &kp F6         &bootloader
+          &bt BT_PRV  &kp F7       &kp F8       &kp F9       &out OUT_USB        &out OUT_BLE &kp F10        &kp F11    &kp F12        &bt BT_NXT
+          &sys_reset  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_NXT &bt BT_CLR_ALL &sys_reset 
+                                   &trans       &kp N0        &trans             &trans       &trans         &trans
             >;
         };
+        
+	wedlock {
+            bindings = <
+         &kp W      &kp C      &kp D        &kp M        &kp K               &kp J        &kp F        &kp O        &kp U       &hycol
+         &ht LGUI R &ht LALT S &ht LSHFT T  &ht LCTRL H  &kp V               &kp Y        &ht RCTRL N  &ht RSHFT E  &ht RALT I  &ht RGUI A
+         &kp Q      &kp B      &kp G        &kp L        &kp X               &kp Z        &kp P        &kp SQT      &spcom      &spdot
+                               &mo 2        &kp SPACE    &mo 1               &kp LSHFT    &key_repeat  &mo 1
+            >;
+        };
+
     };
 };
