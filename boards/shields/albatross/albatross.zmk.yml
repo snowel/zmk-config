@@ -1,0 +1,8 @@
+file_format: "1"
+id: albatross
+name: Albatross
+type: shield
+url: test.com
+requires: [pro_micro]
+features:
+  - keys
