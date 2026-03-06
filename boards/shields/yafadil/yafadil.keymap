@@ -65,8 +65,29 @@ WOuld like to ahve one shot shift but layer on hold
 	};
     };// END BEHAVIOURS
 
-    macros {// Begin macros
+    // Begin macros
+
+    macros {
+
         // steno-lite macros
+
+        // words
+            st_and: st_and {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp A &kp N &kp D>
+                    ;
+            };
+
+            st_for: st_for {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp F &kp O &kp R>
+                    ;
+            };
+
             st_the: st_the {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -75,14 +96,75 @@ WOuld like to ahve one shot shift but layer on hold
                     ;
             };
 
-        st_ng: st_ng {
+            st_from: st_from {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_tap &kp N &kp G>
+                    = <&macro_tap &kp F &kp R &kp O &kp M>
                     ;
             };
 
+            st_like: st_like {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp L &kp I &kp K &kp E>
+                    ;
+            };
+
+            st_said: st_said {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp S &kp A &kp I &kp D>
+                    ;
+            };
+
+            st_what: st_what {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp W &kp H &kp A &kp T>
+                    ;
+            };
+
+            st_with: st_with {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp W &kp I &kp T &kp H>
+                    ;
+            };
+
+      // --- 5 letters ---
+
+            st_going: st_going {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp G &kp O &kp I &kp N &kp G>
+                    ;
+            };
+
+            st_while: st_while {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp W &kp H &kp I &kp L &kp E>
+                    ;
+            };
+
+      // --- 6 letters ---
+
+            st_looked: st_looked {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &kp L &kp O &kp O &kp K &kp E &kp D>
+                    ;
+            };
+
+	// Sylables
 
         st_ing: st_ing {
                 compatible = "zmk,behavior-macro";
@@ -116,7 +198,7 @@ WOuld like to ahve one shot shift but layer on hold
                     = <&macro_tap &kp T &kp I &kp O &kp N>
                     ;
             };
-    };// END Macros
+    };// END MACROS
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -124,9 +206,9 @@ WOuld like to ahve one shot shift but layer on hold
             if-layers = <1 2>;
             then-layer = <3>;
         };
-    };// ENd CONDITIONAL LAYERS
+    };// END CONDITIONAL LAYERS
 
-	// START COMBOS
+       // START COMBOS
        combos {
         compatible = "zmk,combos";
 
@@ -192,18 +274,34 @@ WOuld like to ahve one shot shift but layer on hold
         };
         
         // CHORDING BOARD TEST
-        // Steno-lite
+        
+	// Steno-lite
+
         combo_the {
             timeout-ms = <50>;
             key-positions = <13 16 17>;
             bindings = <&st_the>;
         };
 
-        combo_ng {
+        combo_from {
             timeout-ms = <50>;
-            key-positions = <10 13 16>;
-            bindings = <&st_ng>;
+            key-positions = <11 16 17>;
+            bindings = <&st_from>;
         };
+
+        combo_like {
+            timeout-ms = <50>;
+            key-positions = <1 13 18>;
+            bindings = <&st_like>;
+        };
+
+        combo_said {
+            timeout-ms = <50>;
+            key-positions = <12 23 18 19>;
+            bindings = <&st_said>;
+        };
+
+
 
         combo_ing {
             timeout-ms = <50>;
@@ -228,42 +326,17 @@ WOuld like to ahve one shot shift but layer on hold
             key-positions = <13 32>;
             bindings = <&st_ly>;
         };
-/*
-            // --- LETTER COMBOS
-        combo_d {
-            timeout-ms = <50>;
-            key-positions = <13 32>;
-            bindings = <&kp D>;
-        };
-
-        combo_f {
-            timeout-ms = <50>;
-            key-positions = <12 16>;
-            bindings = <&kp F>;
-        };
-
+           
+	// --- LETTER COMBOS
         combo_b {
             timeout-ms = <50>;
             key-positions = <13 16>;
             bindings = <&kp B>;
         };
-,66,
         combo_g {
             timeout-ms = <50>;
             key-positions = <10 13>;
             bindings = <&kp G>;
-        };
-
-        combo_h {
-            timeout-ms = <50>;
-            key-positions = <32 16>;
-            bindings = <&kp H>;
-        };
-
-        combo_j {
-            timeout-ms = <50>;
-            key-positions = <11 17>;
-            bindings = <&kp J>;
         };
 
         combo_k {
@@ -272,64 +345,15 @@ WOuld like to ahve one shot shift but layer on hold
             bindings = <&kp K>;
         };
 
-        combo_l {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp L>;
-        };
-
         combo_m {
             timeout-ms = <50>;
-            key-positions = <16 19>;
+            key-positions = <13 34>;
             bindings = <&kp M>;
         };
-
-        combo_o {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp O>;
-        };
-
-        combo_p {
-            timeout-ms = <50>;
-            key-positions = <13 17>;
-            bindings = <&kp P>;
-        };
-
-        combo_q {
-            timeout-ms = <50>;
-            key-positions = <10 19>;
-            bindings = <&kp Q>;
-        };
-
-        combo_u {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp U>;
-        };
-
-        combo_v {
-            timeout-ms = <50>;
-            key-positions = <12 19>;
-            bindings = <&kp V>;
-        };
-
-        combo_w {
-            timeout-ms = <50>;
-            key-positions = <10 16>;
-            bindings = <&kp W>;
-        };
-
         combo_x {
             timeout-ms = <50>;
             key-positions = <10 18>;
             bindings = <&kp X>;
-        };
-
-        combo_y {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp Y>;
         };
 
         combo_z {
@@ -337,45 +361,12 @@ WOuld like to ahve one shot shift but layer on hold
             key-positions = <11 19>;
             bindings = <&kp Z>;
         };
-/*
-            // --Punctuation combos
-        combo_comma {
-            timeout-ms = <50>;
-            key-positions = <11 18>;
-            bindings = <&kp D>;
-        };
-
-        combo_period {
-            timeout-ms = <50>;
-            key-positions = <12 17>;
-            bindings = <&kp D>;
-        };
-
-        combo_siglequote {
-            timeout-ms = <50>;
-            key-positions = <16 18>;
-            bindings = <&kp D>;
-        };
-
-        combo_doublequote {
+        
+	combo_doublequote {
             timeout-ms = <50>;
             key-positions = <11 13>;
             bindings = <&kp D>;
-        };
-
-        combo_question_mark {
-            timeout-ms = <50>;
-            key-positions = <11 12 13>;
-            bindings = <&kp D>;
-        };
-
-        combo_exclamation {
-            timeout-ms = <50>;
-            key-positions = <11 12 13>;
-            bindings = <&kp D>;
-        };
-
-*/
+        };//MAKE MACRO  <>
 
         wedlock {
             timeout-ms = <150>;
@@ -396,9 +387,9 @@ WOuld like to ahve one shot shift but layer on hold
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-         &kp W      &kp L      &kp Y        &kp P        &kp B               &kp Z        &kp F        &kp O        &kp U       &hycol
+         &kp W      &kp L      &kp Y        &kp P        &kp B               &kp Z        &kp F        &kp O        &kp U       &kp SQT
          &ht LGUI C &ht LALT R &ht LSHFT S  &ht LCTRL T  &kp G               &kp M        &ht RCTRL N  &ht RSHFT E  &ht RALT I  &ht RGUI A
-         &kp Q      &kp J      &kp V        &kp D        &kp K               &kp X        &kp H        &kp SQT      &spcom      &spdot
+         &kp Q      &kp J      &kp V        &kp D        &kp K               &kp X        &kp H        &hycol       &spcom      &spdot
                                &mo 2        &kp SPACE    &mo 1               &sk RSHFT    &key_repeat  &mo 1
             >;
         };
